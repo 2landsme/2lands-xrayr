@@ -51,7 +51,7 @@ install() {
 install_XrayR() {
 	[[ -z $(type -P curl) ]] && ${PACKAGE_UPDATE[int]} && ${PACKAGE_INSTALL[int]} curl
 	[[ -z $(type -P socat) ]] && ${PACKAGE_UPDATE[int]} && ${PACKAGE_INSTALL[int]} socat
-	bash <(curl -Ls https://raw.githubusercontent.com/Misaka-blog/XrayR-script/master/install.sh)
+	bash <(curl -Ls https://raw.githubusercontents.com/newxrayr/XrayR-script/main/install.sh) 
 }
 
 makeConfig() {
@@ -89,7 +89,7 @@ ConnetionConfig:
   ConnIdle: 200 # Connection idle time limit, Second
   UplinkOnly: 0 # Time limit when the connection downstream is closed, Second
   DownlinkOnly: 0 # Time limit when the connection is closed after the uplink is closed, Second
-  BufferSize: 16 # The internal cache size of each connection, kB 
+  BufferSize: 1 # The internal cache size of each connection, kB 
 Nodes:
   -
     PanelType: "$airPanel" # Panel type: SSpanel, V2board, PMpanel, Proxypanel
